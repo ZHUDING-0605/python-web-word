@@ -63,7 +63,7 @@ if url:
         # 生成词云图
         wordcloud = wc(
             font_path="msyh.ttc",  # 设置字体路径
-            mask= heart_mask
+            mask=heart_mask
             background_color="white",
             random_state=3,  # 设置有多少种随机生成状态，即有多少种配色方案
         ).generate_from_frequencies(filtered_word_count)
