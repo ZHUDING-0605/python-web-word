@@ -57,13 +57,13 @@ if url:
 
         # 词云绘制图片
         st.subheader("词云图")
-        heart_mask_path = r'C:\Users\萦怀\Desktop\python实训\love.png'
+        heart_mask_path = 'love.png'
         heart_mask = np.array(Image.open(heart_mask_path))
 
         # 生成词云图
         wordcloud = wc(
-            font_path="C:/Windows/Fonts/msyh.ttc",  # 设置字体路径
-
+            font_path="msyh.ttc",  # 设置字体路径
+            mask= heart_mask
             background_color="white",
             random_state=3,  # 设置有多少种随机生成状态，即有多少种配色方案
         ).generate_from_frequencies(filtered_word_count)
